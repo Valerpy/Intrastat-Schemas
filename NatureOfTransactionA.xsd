@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema targetNamespace="http://eurostat/instat/codelists/xml/NatureOfTransactionA.xsd" xmlns:eurostat.instat.codelists.NoTA="http://eurostat/instat/codelists/xml/NatureOfTransactionA.xsd" xmlns="http://www.w3.org/2001/XMLSchema" xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="unqualified" attributeFormDefault="unqualified">
+	<xs:complexType name="NatureOfTransactionAType">
+		<xs:annotation>
+			<xs:documentation>NatureOfTransactionAType - Type declaration to be used by other schema's </xs:documentation>
+		</xs:annotation>
+		<xs:simpleContent>
+			<xs:extension base="eurostat.instat.codelists.NoTA:NoTAQualifier">
+				<xs:attributeGroup ref="eurostat.instat.codelists.NoTA:Identity"/>
+			</xs:extension>
+		</xs:simpleContent>
+	</xs:complexType>
+	<xs:simpleType name="NoTAQualifier">
+		<xs:restriction base="xs:token">
+			<xs:enumeration value="1">
+				<xs:annotation>
+					<xs:documentation>Transactions involving actual or intended transfer of ownership against compensation (financial or otherwise) (except the transactions listed under 2, 7 and 8)</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="2">
+				<xs:annotation>
+					<xs:documentation>Return of goods after registration of the original transaction under code 1. replacement of goods free of charge</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="3">
+				<xs:annotation>
+					<xs:documentation>Transactions (not temporary) involving transfer of ownership but without compensation (financial or other)</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="4">
+				<xs:annotation>
+					<xs:documentation>Operations with a view to processing under contract (except those recorded under 7)</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="5">
+				<xs:annotation>
+					<xs:documentation>Operations following processing under contract (except those recorded under 7)</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="6">
+				<xs:annotation>
+					<xs:documentation>Particular transactions coded for national purposes</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="7">
+				<xs:annotation>
+					<xs:documentation>Operations under joint defence projects or other joint intergovernmental production programs</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="8">
+				<xs:annotation>
+					<xs:documentation>Supply of building materials and equipment for works that are part of a general construction or engineering contract</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="9">
+				<xs:annotation>
+					<xs:documentation>Other transactions</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:attributeGroup name="Identity">
+		<xs:attribute name="ID" type="xs:token" use="optional" fixed="NoTA">
+			<xs:annotation>
+				<xs:documentation>Nature Of Transaction A</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+		<xs:attribute name="versionID" type="xs:string" use="optional" fixed="x.x">
+			<xs:annotation>
+				<xs:documentation>Code List Version - x.x</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+	</xs:attributeGroup>
+</xs:schema>

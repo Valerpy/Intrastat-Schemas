@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema targetNamespace="http://eurostat/instat/codelists/xml/MemberStates.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns="http://www.w3.org/2001/XMLSchema" xmlns:eurostat.instat.codelists.ms="http://eurostat/instat/codelists/xml/MemberStates.xsd" elementFormDefault="unqualified" attributeFormDefault="unqualified">
+	<complexType name="MemberStatesType">
+		<annotation>
+			<documentation>MemberStatesType - Type declaration to be used by other schema's </documentation>
+		</annotation>
+		<simpleContent>
+			<extension base="eurostat.instat.codelists.ms:MSQualifier">
+				<attributeGroup ref="eurostat.instat.codelists.ms:Identity"/>
+			</extension>
+		</simpleContent>
+	</complexType>
+	<simpleType name="MSQualifier">
+		<restriction base="xs:token">
+			<enumeration value="AT">
+				<annotation>
+					<documentation>Austria</documentation>
+				</annotation>
+			</enumeration>
+			<enumeration value="BE">
+				<annotation>
+					<documentation>Belgium</documentation>
+				</annotation>
+			</enumeration>
+			<enumeration value="BG">
+				<annotation>
+					<documentation>Bulgaria</documentation>
+				</annotation>
+			</enumeration>
+			<enumeration value="HR">
+				<annotation>
+					<documentation>Croatia</documentation>
+				</annotation>
+			</enumeration>
+			<enumeration value="CY">
+				<annotation>
+					<documentation>Cyprus</documentation>
+				</annotation>
+			</enumeration>
+			<enumeration value="CZ">
+				<annotation>
+					<documentation>Czech Republic</documentation>
+				</annotation>
+			</enumeration>
+			<enumeration value="DK">
+				<annotation>
+					<documentation>Denmark</documentation>
+				</annotation>
+			</enumeration>
+			<enumeration value="EE">
+				<annotation>
+					<documentation>Estonia</documentation>
+				</annotation>
+			</enumeration>
+			<enumeration value="FI">
+				<annotation>
+					<documentation>Finland</documentation>
+				</annotation>
+			</enumeration>
+			<enumeration value="FR">
+				<annotation>
+					<documentation>France</documentation>
+				</annotation>
+			</enumeration>
+			<enumeration value="DE">
+				<annotation>
+					<documentation>Germany</documentation>
+				</annotation>
+			</enumeration>
+			<enumeration value="GR">
+				<annotation>
+					<documentation>Greece</documentation>
+				</annotation>
+			</enumeration>
+			<enumeration value="HU">
+				<annotation>
+					<documentation>Hungary</documentation>
+				</annotation>
+			</enumeration>
+			<enumeration value="IE">
+				<annotation>
+					<documentation>Ireland</documentation>
+				</annotation>
+			</enumeration>
+			<enumeration value="IT">
+				<annotation>
+					<documentation>Italy</documentation>
+				</annotation>
+			</enumeration>
+			<enumeration value="LV">
+				<annotation>
+					<documentation>Latvia</documentation>
+				</annotation>
+			</enumeration>
+			<enumeration value="LT">
+				<annotation>
+					<documentation>Lithuania</documentation>
+				</annotation>
+			</enumeration>
+			<enumeration value="LU">
+				<annotation>
+					<documentation>Luxemburg</documentation>
+				</annotation>
+			</enumeration>
+			<enumeration value="MT">
+				<annotation>
+					<documentation>Malta</documentation>
+				</annotation>
+			</enumeration>
+			<enumeration value="NL">
+				<annotation>
+					<documentation>Netherlands</documentation>
+				</annotation>
+			</enumeration>
+			<enumeration value="RO">
+				<annotation>
+					<documentation>Romania</documentation>
+				</annotation>
+			</enumeration>
+			<enumeration value="SK">
+				<annotation>
+					<documentation>Slovakia</documentation>
+				</annotation>
+			</enumeration>
+			<enumeration value="SI">
+				<annotation>
+					<documentation>Slovenia</documentation>
+				</annotation>
+			</enumeration>
+			<enumeration value="ES">
+				<annotation>
+					<documentation>Spain</documentation>
+				</annotation>
+			</enumeration>
+			<enumeration value="SE">
+				<annotation>
+					<documentation>Sweden</documentation>
+				</annotation>
+			</enumeration>
+			<enumeration value="PL">
+				<annotation>
+					<documentation>Poland</documentation>
+				</annotation>
+			</enumeration>
+			<enumeration value="PT">
+				<annotation>
+					<documentation>Portugal</documentation>
+				</annotation>
+			</enumeration>
+			<enumeration value="XI">
+				<annotation>
+					<documentation>Northern Ireland</documentation>
+				</annotation>
+			</enumeration>
+						<enumeration value="QR">
+				<annotation>
+					<documentation>Stores and provisions</documentation>
+				</annotation>
+			</enumeration>
+						<enumeration value="QV">
+				<annotation>
+					<documentation>Delivery to international organizations such as NATO / or EU institutions</documentation>
+				</annotation>
+			</enumeration>
+		</restriction>
+	</simpleType>
+	<attributeGroup name="Identity">
+		<attribute name="ID" type="xs:token" use="optional" fixed="ms">
+			<annotation>
+				<documentation>Code List Identifier - subset of ISO 3166</documentation>
+			</annotation>
+		</attribute>
+		<attribute name="versionID" type="xs:string" use="optional" fixed="x.x">
+			<annotation>
+				<documentation>Code List Version - x.x</documentation>
+			</annotation>
+		</attribute>
+	</attributeGroup>
+</schema>

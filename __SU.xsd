@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema targetNamespace="http://eurostat/instat/codelists/xml/SU.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns="http://www.w3.org/2001/XMLSchema" xmlns:eurostat.instat.codelists.su="http://eurostat/instat/codelists/xml/SU.xsd" elementFormDefault="unqualified" attributeFormDefault="unqualified">
+	<complexType name="SUType">
+		<annotation>
+			<documentation>SUType - Type declaration to be used by other schema's </documentation>
+		</annotation>
+		<simpleContent>
+			<extension base="eurostat.instat.codelists.su:SUQualifier">
+				<attributeGroup ref="eurostat.instat.codelists.su:Identity"/>
+			</extension>
+		</simpleContent>
+	</complexType>
+	<simpleType name="SUQualifier">
+		<restriction base="xs:token">
+			<enumeration value="CTM"/>
+			<enumeration value="NCL"/>
+			<enumeration value="CCT"/>
+			<enumeration value="GRM"/>
+			<enumeration value="GFI"/>
+			<enumeration value="GRT"/>
+			<enumeration value="KCC"/>
+			<enumeration value="KNS"/>
+			<enumeration value="KPO"/>
+			<enumeration value="KPH"/>
+			<enumeration value="KMA"/>
+			<enumeration value="KNI"/>
+			<enumeration value="KSH"/>
+			<enumeration value="KGME"/>
+			<enumeration value="KPP"/>
+			<enumeration value="KSD"/>
+			<enumeration value="KUR"/>
+			<enumeration value="MWH"/>
+			<enumeration value="LTR"/>
+			<enumeration value="KLT"/>
+			<enumeration value="LPA"/>
+			<enumeration value="MTR"/>
+			<enumeration value="MTK"/>
+			<enumeration value="MTQ"/>
+			<enumeration value="MTQC"/>
+			<enumeration value="NPR"/>
+			<enumeration value="NAR"/>
+			<enumeration value="CEN"/>
+			<enumeration value="MIL"/>
+			<enumeration value="TJO"/>
+			<enumeration value="KGM"/>
+		</restriction>
+	</simpleType>
+	<attributeGroup name="Identity">
+		<attribute name="ID" type="xs:token" use="optional" fixed="su">
+			<annotation>
+				<documentation>Supplementary Unit</documentation>
+			</annotation>
+		</attribute>
+		<attribute name="versionID" type="xs:string" use="optional" fixed="x.x">
+			<annotation>
+				<documentation>Code List Version - x.x</documentation>
+			</annotation>
+		</attribute>
+	</attributeGroup>
+</schema>

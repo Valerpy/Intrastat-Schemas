@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema targetNamespace="http://eurostat/instat/codelists/xml/NatureOfTransactionB.xsd" xmlns:eurostat.instat.codelists.NoTB="http://eurostat/instat/codelists/xml/NatureOfTransactionB.xsd" xmlns="http://www.w3.org/2001/XMLSchema" xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="unqualified" attributeFormDefault="unqualified">
+	<xs:complexType name="NatureOfTransactionBType">
+		<xs:annotation>
+			<xs:documentation>NatureOfTransactionBType - Type declaration to be used by other schema's </xs:documentation>
+		</xs:annotation>
+		<xs:simpleContent>
+			<xs:extension base="eurostat.instat.codelists.NoTB:NoTBQualifier">
+				<xs:attributeGroup ref="eurostat.instat.codelists.NoTB:Identity"/>
+			</xs:extension>
+		</xs:simpleContent>
+	</xs:complexType>
+	<xs:simpleType name="NoTBQualifier">
+		<xs:restriction base="xs:token">
+			<xs:enumeration value="1"/>
+			<xs:enumeration value="2"/>
+			<xs:enumeration value="3"/>
+			<xs:enumeration value="4"/>
+			<xs:enumeration value="9"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:attributeGroup name="Identity">
+		<xs:attribute name="ID" type="xs:token" use="optional" fixed="NoTB">
+			<xs:annotation>
+				<xs:documentation>Nature Of Transaction B</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+		<xs:attribute name="versionID" type="xs:string" use="optional" fixed="x.x">
+			<xs:annotation>
+				<xs:documentation>Code List Version - x.x</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+	</xs:attributeGroup>
+</xs:schema>

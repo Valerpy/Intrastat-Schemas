@@ -1,0 +1,35 @@
+Statistik: Intrahandel
+Stand: 2008
+
+XML Schema, abgekürzt XSD (XML Schema Definition) für
+die Intrahandel Dateimeldungen im Format INSTAT/XML
+
+INSTAT/XML ist eine auf europäischer Ebene entwickelte 
+XML-basierte Nachricht für die Meldung von Rohdaten zur 
+Intrahandelsstatistik. Sie wurde von einer Arbeitsgruppe 
+des Europäischen Instituts für Normung entwickelt. 
+
+Das entpackte Zip Archiv xsd.zip enthält folgende 3 XML-Schemas: 
+
+1) instat6.2.xsd
+die Datei ist 'standalone' und enthält das vollständige Schema 
+und benötigt keine weiteren Dateien.
+
+2) instat6.3.xsd 
+importiert die Schema-Dateien xenc* und xmldsig*.
+
+3) instat6.3.1 
+importiert alle Schema-Dateien 
+(außer __SU.xsd. und den anderen instat6* Dateien) 
+
+Für Fragen zur Implementierung von INSTAT/XML-Nachrichten
+wenden Sie sich bitte an
+
+Statistisches Bundesamt
+Michael Schäfer
+C304 Werkzeuge und Standards
+65180 Wiesbaden
+
+E-Mail michael.schaefer@destatis.de
+Telefon: +49 611 75 3652
+Fax: +49 611 75 3951

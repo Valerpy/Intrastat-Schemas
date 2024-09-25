@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSPY v5 rel. 4 U (http://www.xmlspy.com) by Maria Glossioti (Liaison Systems SA) -->
+<schema targetNamespace="http://eurostat/instat/codelists/xml/ModeOfTransport.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns="http://www.w3.org/2001/XMLSchema" xmlns:eurostat.instat.codelists.mot="http://eurostat/instat/codelists/xml/ModeOfTransport.xsd" elementFormDefault="unqualified" attributeFormDefault="unqualified">
+	<complexType name="ModeOfTransportType">
+		<annotation>
+			<documentation>ModeOfTransportType - Type declaration to be used by other schema's </documentation>
+		</annotation>
+		<simpleContent>
+			<extension base="eurostat.instat.codelists.mot:MoTQualifier">
+				<attributeGroup ref="eurostat.instat.codelists.mot:Identity"/>
+			</extension>
+		</simpleContent>
+	</complexType>
+	<simpleType name="MoTQualifier">
+		<restriction base="xs:token">
+			<enumeration value="1">
+				<annotation>
+					<documentation>Sea transport </documentation>
+				</annotation>
+			</enumeration>
+			<enumeration value="2">
+				<annotation>
+					<documentation>Rail transport </documentation>
+				</annotation>
+			</enumeration>
+			<enumeration value="3">
+				<annotation>
+					<documentation>Road transport</documentation>
+				</annotation>
+			</enumeration>
+			<enumeration value="4">
+				<annotation>
+					<documentation>Air transport</documentation>
+				</annotation>
+			</enumeration>
+			<enumeration value="5">
+				<annotation>
+					<documentation>Postal consignment</documentation>
+				</annotation>
+			</enumeration>
+			<enumeration value="7">
+				<annotation>
+					<documentation>Fixed transport installations</documentation>
+				</annotation>
+			</enumeration>
+			<enumeration value="8">
+				<annotation>
+					<documentation>Inland waterway transport</documentation>
+				</annotation>
+			</enumeration>
+			<enumeration value="9">
+				<annotation>
+					<documentation>Own propulsion</documentation>
+				</annotation>
+			</enumeration>
+		</restriction>
+	</simpleType>
+	<attributeGroup name="Identity">
+		<attribute name="ID" type="xs:token" use="optional" fixed="mot">
+			<annotation>
+				<documentation>Mode Of Transport</documentation>
+			</annotation>
+		</attribute>
+		<attribute name="versionID" type="xs:string" use="optional" fixed="x.x">
+			<annotation>
+				<documentation>Code List Version - x.x</documentation>
+			</annotation>
+		</attribute>
+	</attributeGroup>
+</schema>

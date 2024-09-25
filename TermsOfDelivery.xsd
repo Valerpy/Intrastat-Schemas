@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema targetNamespace="http://eurostat/instat/codelists/xml/TermsOfDelivery.xsd" xmlns:eurostat.instat.codelists.ToD="http://eurostat/instat/codelists/xml/TermsOfDelivery.xsd" xmlns="http://www.w3.org/2001/XMLSchema" xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="unqualified" attributeFormDefault="unqualified">
+	<xs:complexType name="TermsOfDeliveryType">
+		<xs:annotation>
+			<xs:documentation>TermsOfDeliveryType - Type declaration to be used by other schema's </xs:documentation>
+		</xs:annotation>
+		<xs:simpleContent>
+			<xs:extension base="eurostat.instat.codelists.ToD:TODQualifier">
+				<xs:attributeGroup ref="eurostat.instat.codelists.ToD:Identity"/>
+			</xs:extension>
+		</xs:simpleContent>
+	</xs:complexType>
+	<xs:simpleType name="TODQualifier">
+		<xs:restriction base="xs:token">
+			<xs:enumeration value="EXW">
+				<xs:annotation>
+					<xs:documentation>ex-works</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="FCA">
+				<xs:annotation>
+					<xs:documentation>free carrier</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="FAS">
+				<xs:annotation>
+					<xs:documentation>free alongside ship</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="FOB">
+				<xs:annotation>
+					<xs:documentation>free on board</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="CFR">
+				<xs:annotation>
+					<xs:documentation>cost and freight (C &amp; F)</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="CIF">
+				<xs:annotation>
+					<xs:documentation>cost, insurance and freight</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="CPT">
+				<xs:annotation>
+					<xs:documentation>carriage paid to</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="CIP">
+				<xs:annotation>
+					<xs:documentation>carriage and insurance paid to</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="DAF">
+				<xs:annotation>
+					<xs:documentation>delivered at frontier</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="DES">
+				<xs:annotation>
+					<xs:documentation>delivered ex-ship</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="DEQ">
+				<xs:annotation>
+					<xs:documentation>delivered ex-quay</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="DDU">
+				<xs:annotation>
+					<xs:documentation>delivered duty unpaid</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="DDP">
+				<xs:annotation>
+					<xs:documentation>delivered duty paid</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="XXX">
+				<xs:annotation>
+					<xs:documentation>delivery terms other than the above</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:attributeGroup name="Identity">
+		<xs:attribute name="ID" type="xs:token" use="optional" fixed="ToD">
+			<xs:annotation>
+				<xs:documentation>Terms of Delivery</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+		<xs:attribute name="versionID" type="xs:string" use="optional" fixed="x.x">
+			<xs:annotation>
+				<xs:documentation>Code List Version - x.x</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+	</xs:attributeGroup>
+</xs:schema>
